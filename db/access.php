@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = [
 
-    'block/edusharing:myaddinstance' => [
+    'block/edusharing_workspace:myaddinstance' => [
         'captype'      => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes'   => [
@@ -36,7 +36,7 @@ $capabilities = [
 
         'clonepermissionsfrom' => 'moodle/my:manageblocks',
     ],
-    'block/edusharing:addinstance'   => [
+    'block/edusharing_workspace:addinstance'   => [
         'riskbitmask'  => RISK_SPAM | RISK_XSS,
         'captype'      => 'write',
         'contextlevel' => CONTEXT_BLOCK,

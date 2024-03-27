@@ -60,7 +60,7 @@ class block_edusharing extends block_base {
 
         $this->content       = new stdClass;
         // phpcs:disable -- Just messy html
-        $this->content->text = '<form action="' . $CFG->wwwroot . '/blocks/edusharing/helper/cc_workspace.php" method="get">
+        $this->content->text = '<form action="' . $CFG->wwwroot . '/blocks/edusharing_workspace/helper/cc_workspace.php" method="get">
                                 <input type="hidden" name="sesskey" value="' . sesskey() . '"/>
                                 <input type="hidden" name="id" value="' . $COURSE->id . '" /><input type="submit" class="btn btn-primary" value="' .
             htmlentities(get_string('button_text', 'block_edusharing'), ENT_COMPAT) . '" /></form>';
