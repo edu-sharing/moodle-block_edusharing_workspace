@@ -48,7 +48,7 @@ try {
         trigger_error(get_string('error_invalid_course_id', 'block_edusharing'), E_USER_WARNING);
         exit();
     }
-    $PAGE->set_url('/blocks/edusharing_workspace/helper/cc_workspace.php', ['id' => $id]);
+    $PAGE->set_url('/blocks/edusharing/helper/cc_workspace.php', ['id' => $id]);
     $course = $DB->get_record('course', ['id' => $id], '*', MUST_EXIST);
     require_login($course->id);
     echo $OUTPUT->header();

@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Refactored code and doc blocks to match namespaces with repository name
+- Refactored code and doc blocks to match namespaces with repository name. Please note: In order to update from an older version the old plugin has to be uninstalled first
+- Updated README.md
 
 ## [8.0.1] - 2024-01-14
 

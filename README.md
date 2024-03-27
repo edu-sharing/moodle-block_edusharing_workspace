@@ -15,7 +15,9 @@ Depends on the edu-sharing activity module.
 Installation
 ------------
 
-For a full documentation with screenshots of the post installation steps for the edu-sharing plugin pakage visit the [documentation pages](http://docs.edu-sharing.com/confluence/edp/en).
+For a full documentation with screenshots of the post installation steps for the edu-sharing plugin package visit the [documentation pages](http://docs.edu-sharing.com/confluence/edp/en).
+
+Please note: When updating from a version < 8.0.2 to >= 8.0.2 the old plugin needs to be uninstalled from your Moodle first
 
 Documentation
 -------------
