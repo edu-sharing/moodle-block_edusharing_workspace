@@ -18,7 +18,7 @@
  *
  * Define capabilities
  *
- * @package    block_edusharing
+ * @package    block_edusharing_workspace
  * @copyright  metaVentis GmbH — http://metaventis.com
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
