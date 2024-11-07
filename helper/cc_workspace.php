@@ -20,6 +20,8 @@
  - opens external edu-sharingWorkspace in iFrame
  */
 
+// phpcs:ignoreFile
+
 /**
  * Get workspace within iframe
  *
