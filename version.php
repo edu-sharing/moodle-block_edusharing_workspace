@@ -27,7 +27,7 @@ $plugin->component = 'block_edusharing_workspace';
 $plugin->dependencies = [
     'mod_edusharing'  => 2024050300,
 ];
-$plugin->version = 2024110700;
+$plugin->version = 2025071400;
 $plugin->requires = 2022112809;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '8.1.1';
+$plugin->release = '10.0.0';

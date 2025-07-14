@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [10.0.0] - 2025-07-14
+
+## Changed
+
+- Bumped the PHP version in the CI pipeline to 8.4
+- Bumped the MYSQL version in the CI pipeline to 9.3.0
+- Bumped the Moodle version in the CI pipeline to 5.0
+- Ensured compatibility with Moodle 5.0
+
 ## [8.1.1] - 2024-11-07
 
 ### Changed
@@ -16,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Major refactoring to update plugin to current Moodle CI requirements
+- Major refactoring to update the plugin to current Moodle CI requirements
 
 ### Added
 
@@ -36,4 +45,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Updated logic to use new edu-sharing activity plugin
+- Updated logic to use the new edu-sharing activity plugin
