@@ -46,6 +46,7 @@ try {
     require_sesskey();
     // Course id.
     $id = optional_param('id', 0, PARAM_INT);
+    $action = optional_param('action', '', PARAM_TEXT);
     if (!$id) {
         trigger_error(get_string('error_invalid_course_id', 'block_edusharing_workspace'), E_USER_WARNING);
         exit();
@@ -57,12 +58,10 @@ try {
     $service = new EduSharingService();
     $ticket  = $service->get_ticket();
     $link    = trim(get_config('edusharing', 'application_cc_gui_url'), '/');
-    $link    .= '/?mode=1';
+    $link    .= '/components';
+    $link    .= $action === 'search' ? '/search' : '/workspace';
     $utils   = new UtilityFunctions();
-    $user    = $utils->get_auth_key();
-    $link    .= '&user=' . urlencode($user);
-    $link    .= '&locale=' . current_language();
-    $link    .= '&ticket=' . urlencode($ticket);
+    $link    .= '?ticket=' . urlencode($ticket);
 } catch (Exception $exception) {
     debugging($exception->getMessage());
     echo 'Error: ' . $exception->getMessage();

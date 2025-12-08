@@ -59,11 +59,29 @@ class block_edusharing_workspace extends block_base {
         global $COURSE;
 
         $this->content       = new stdClass;
+
         // phpcs:disable -- Just messy html
-        $this->content->text = '<form action="' . $CFG->wwwroot . '/blocks/edusharing_workspace/helper/cc_workspace.php" method="get">
-                                <input type="hidden" name="sesskey" value="' . sesskey() . '"/>
-                                <input type="hidden" name="id" value="' . $COURSE->id . '" /><input type="submit" class="btn btn-primary" value="' .
-            htmlentities(get_string('button_text', 'block_edusharing_workspace'), ENT_COMPAT) . '" /></form>';
+        $this->content->text = '
+<form action="' . $CFG->wwwroot . '/blocks/edusharing_workspace/helper/cc_workspace.php" method="get">
+    <input type="hidden" name="sesskey" value="' . sesskey() . '"/>
+    <input type="hidden" name="id" value="' . $COURSE->id . '" />
+
+    <div class="btn-group-vertical" role="group">
+        <button type="submit"
+                name="action"
+                value="default"
+                class="btn btn-primary">
+            ' . htmlentities(get_string('button_text', 'block_edusharing_workspace'), ENT_COMPAT) . '
+        </button>
+        <div class="bg-secondary" style="height: 2px;"></div>
+        <button type="submit"
+                name="action"
+                value="search"
+                class="btn btn-primary">
+            ' . htmlentities(get_string('button_text_secondary', 'block_edusharing_workspace'), ENT_COMPAT) . '
+        </button>
+    </div>
+</form>';
         // phpcs:enable
         return $this->content;
     }

@@ -23,8 +23,9 @@
  */
 
 $string['back_to'] = 'Zurück zu';
-$string['block_title'] = 'edu-sharing Arbeitsplatz';
+$string['block_title'] = 'edu-sharing';
 $string['button_text'] = 'Zu Ihrem Arbeitsplatz';
+$string['button_text_secondary'] = 'Zur Suche';
 $string['edusharing_workspace:addinstance'] = 'Block edu-sharing Workspace hinzufügen';
 $string['edusharing_workspace:myaddinstance'] = 'Block edu-sharing Workspace zum Dashboard hinzufügen';
 $string['error_course_not_found'] = 'Kurs kann nicht aus der Datenbank geladen werden.';
