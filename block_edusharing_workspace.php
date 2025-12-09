@@ -29,7 +29,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_edusharing_workspace extends block_base {
-
     /**
      * Initialize this block
      */
@@ -58,7 +57,7 @@ class block_edusharing_workspace extends block_base {
         global $CFG;
         global $COURSE;
 
-        $this->content       = new stdClass;
+        $this->content = new stdClass();
 
         // phpcs:disable -- Just messy html
         $this->content->text = '
