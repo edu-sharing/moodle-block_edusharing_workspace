@@ -31,4 +31,6 @@ $string['edusharing_workspace:myaddinstance'] = 'Add a new edu-sharing workspace
 $string['error_course_not_found'] = 'Cannot load course from database.';
 $string['error_invalid_course_id'] = 'Invalid course id';
 $string['error_no_gui_url_defined'] = 'No "cc_gui_url" configured.';
+$string['open_in_new_tab'] = 'Open Edu-Sharing in new tab';
+$string['open_in_new_tab_help'] = 'If enabled, the Edu-Sharing repository will be opened in a new browser tab.';
 $string['pluginname'] = 'edu-sharing - Workspace';

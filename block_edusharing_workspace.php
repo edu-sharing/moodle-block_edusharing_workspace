@@ -54,29 +54,31 @@ class block_edusharing_workspace extends block_base {
             return $this->content;
         }
 
-        global $CFG;
+        $repourl = rtrim(get_config('edusharing', 'application_cc_gui_url'), '/');
+        $this->page->requires->js_call_amd('block_edusharing_workspace/main', 'main', [$repourl]);
+
         global $COURSE;
 
         $this->content = new stdClass();
 
         // phpcs:disable -- Just messy html
         $this->content->text = '
-<form action="' . $CFG->wwwroot . '/blocks/edusharing_workspace/helper/cc_workspace.php" method="get">
-    <input type="hidden" name="sesskey" value="' . sesskey() . '"/>
-    <input type="hidden" name="id" value="' . $COURSE->id . '" />
+<form>
+    <input type="hidden" id="eduCourseId" name="eduCourseId" value="' . $COURSE->id . '" />
 
     <div class="btn-group-vertical" role="group">
-        <button type="submit"
+        <button id="workspace"
                 name="action"
                 value="default"
-                class="btn btn-primary">
+                class="btn btn-primary edu-workspace-button">
             ' . htmlentities(get_string('button_text', 'block_edusharing_workspace'), ENT_COMPAT) . '
         </button>
         <div class="bg-secondary" style="height: 2px;"></div>
-        <button type="submit"
+        <button 
+                id="search"
                 name="action"
                 value="search"
-                class="btn btn-primary">
+                class="btn btn-primary edu-workspace-button">
             ' . htmlentities(get_string('button_text_secondary', 'block_edusharing_workspace'), ENT_COMPAT) . '
         </button>
     </div>

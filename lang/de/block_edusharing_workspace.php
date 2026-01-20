@@ -31,4 +31,6 @@ $string['edusharing_workspace:myaddinstance'] = 'Block edu-sharing Workspace zum
 $string['error_course_not_found'] = 'Kurs kann nicht aus der Datenbank geladen werden.';
 $string['error_invalid_course_id'] = 'Ungültige Kurs ID';
 $string['error_no_gui_url_defined'] = 'Parameter "cc_gui_url" wurde nicht konfiguriert.';
+$string['open_in_new_tab'] = 'Edu-Sharing In neuem Tab öffnen';
+$string['open_in_new_tab_help'] = 'Wenn aktiviert, wird das Edu-Sharing-Repository in einem neuen Browsertab geöffnet.';
 $string['pluginname'] = 'edu-sharing - Workspace';
