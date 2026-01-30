@@ -14,6 +14,8 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+use mod_edusharing\IdpHelper;
+
 /**
  * Provide a block to link directly to an user's workspace on repository.
  *
@@ -30,9 +32,32 @@
  */
 class block_edusharing_workspace extends block_base {
     /**
+     * @var IdpHelper|null
+     */
+    private ?IdpHelper $idphelper = null;
+
+    /**
+     * Retrieves the IdP helper instance.
+     *
+     * @return IdpHelper The instance of the IdP helper.
+     */
+    private function get_idp_helper(): IdpHelper {
+        if ($this->idphelper === null) {
+            $this->idphelper = new IdpHelper();
+        }
+        return $this->idphelper;
+    }
+
+    /**
      * Initialize this block
      */
     public function init() {
+        $this->title = '';
+
+        if (!$this->get_idp_helper()->check_edu_access()) {
+            return;
+        }
+        $this->title = get_string('block_title', 'block_edusharing_workspace');
         // phpcs:disable -- Just messy svg
         $eduicon = '<svg  version="1.1" id="Layer_1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="19.938" height="19.771"
                          viewBox="0 0 19.938 19.771" overflow="visible" enable-background="new 0 0 19.938 19.771" xml:space="preserve">
@@ -50,7 +75,7 @@ class block_edusharing_workspace extends block_base {
      * @see blocks/block_base::get_content()
      */
     public function get_content() {
-        if ($this->content !== null) {
+        if ($this->content !== null || !$this->get_idp_helper()->check_edu_access()) {
             return $this->content;
         }
 
@@ -74,7 +99,7 @@ class block_edusharing_workspace extends block_base {
             ' . htmlentities(get_string('button_text', 'block_edusharing_workspace'), ENT_COMPAT) . '
         </button>
         <div class="bg-secondary" style="height: 2px;"></div>
-        <button 
+        <button
                 id="search"
                 name="action"
                 value="search"
