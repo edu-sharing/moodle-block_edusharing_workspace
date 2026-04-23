@@ -89,7 +89,7 @@ class block_edusharing_workspace extends block_base {
         // phpcs:disable -- Just messy html
         $this->content->text = '
 <form>
-    <input type="hidden" id="eduCourseId" name="eduCourseId" value="' . $COURSE->id . '" />
+    <input type="hidden" id="eduCourseId" name="eduCourseId" value="' . (int)$COURSE->id . '" />
 
     <div class="btn-group-vertical" role="group">
         <button id="workspace"
